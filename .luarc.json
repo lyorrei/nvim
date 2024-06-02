@@ -1,5 +1,6 @@
 {
     "diagnostics.globals": [
-        "has_words_before"
+        "has_words_before",
+        "M"
     ]
 }

@@ -13,5 +13,5 @@ vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC
 -- vim.keymap.set({ "n", "v" }, "<leader>k", "K", { noremap = true, desc = "Keyword" })
 -- vim.keymap.set({ "n", "v" }, "<leader>j", "J", { noremap = true, desc = "Join lines" })
 
-vim.keymap.set("n", "H", "^", { noremap = true, silent = true, desc = "Beginning of line" })
-vim.keymap.set("n", "L", "$", { noremap = true, silent = true, desc = "End of line" })
+vim.keymap.set({ "n", "v" }, "H", "^", { noremap = true, silent = true, desc = "Beginning of line" })
+vim.keymap.set({ "n", "v" }, "L", "$", { noremap = true, silent = true, desc = "End of line" })
