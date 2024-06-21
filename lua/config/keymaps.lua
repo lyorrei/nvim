@@ -15,3 +15,22 @@ vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC
 
 vim.keymap.set({ "n", "v" }, "H", "^", { noremap = true, silent = true, desc = "Beginning of line" })
 vim.keymap.set({ "n", "v" }, "L", "$", { noremap = true, silent = true, desc = "End of line" })
+
+-- Variável para armazenar o estado das inlay hints
+local inlay_hint_enabled = false
+
+-- Função para alternar as inlay hints
+local function toggle_inlay_hint()
+  if inlay_hint_enabled then
+    -- Desabilitar as inlay hints
+    vim.lsp.inlay_hint.enable(false)
+    inlay_hint_enabled = false
+  else
+    -- Habilitar as inlay hints
+    vim.lsp.inlay_hint.enable(true)
+    inlay_hint_enabled = true
+  end
+end
+
+-- Mapeamento de tecla para alternar as inlay hints
+vim.keymap.set("n", "<Leader>ci", toggle_inlay_hint, { noremap = true, silent = true, desc = "Toggle inlay hints" })
