@@ -12,12 +12,8 @@ return {
     },
   },
   opts = {
-    -- default_file_explorer = true,
     view_options = {
       show_hidden = true,
     },
   },
-  init = function()
-    require("oil").setup()
-  end,
 }
